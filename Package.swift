@@ -2,12 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "session",
+    name: "Session",
     platforms: [
         .iOS(.v15)
     ],
     products: [
-        .library(name: "SessionStatic", type: .static, targets: ["Session"]),
+        .library(name: "Session", type: .static, targets: ["Session"]),
         .library(name: "SessionDynamic", type: .dynamic, targets: ["Session"])
     ],
     dependencies: [
