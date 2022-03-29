@@ -13,3 +13,5 @@ let sessionStub = JSONSessionStub.success(data: "{...10 users...}".data(using: .
 let client = YourAPIClient(session: sessionStub)
 client.people(page: 0, pageSize: 10) { result in ... }
 ```
+
+[Documentation](https://janodevorg.github.io/Session/documentation/session/).
