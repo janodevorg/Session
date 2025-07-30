@@ -1,28 +1,28 @@
-// swift-tools-version:5.6
+// swift-tools-version:6.1
 import PackageDescription
 
 let package = Package(
     name: "Session",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v18)
     ],
     products: [
         .library(name: "Session", type: .static, targets: ["Session"]),
         .library(name: "SessionDynamic", type: .dynamic, targets: ["Session"])
     ],
     dependencies: [
-        .package(url: "git@github.com:apple/swift-docc-plugin.git", from: "1.0.0")
+        .package(url: "git@github.com:apple/swift-docc-plugin.git", from: "1.4.3")
     ],
     targets: [
         .target(
             name: "Session",
             dependencies: [],
-            path: "sources/main"
+            path: "Sources/Main"
         ),
         .testTarget(
             name: "SessionTests",
             dependencies: ["Session"],
-            path: "sources/tests"
+            path: "Sources/Tests"
         )
     ]
 )
